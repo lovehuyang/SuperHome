@@ -9,8 +9,26 @@
 #ifndef SuperHome_pch
 #define SuperHome_pch
 
-#define TESTSTR @"123456"
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIColor+HLY.h"
+#import <SDImageCache.h>
+#import <SDImageCacheConfig.h>
+#import "UIImageView+WebCache.h"
+#import "GlobalTools.h"
+#import "ConfigHeader.h"
+#import "CommonDataHeader.h"
+
+
+
+//-------------------打印日志-------------------------
+//DEBUG 模式下打印日志,当前行
+#ifdef DEBUG
+
+#define DLog(format,...) printf("%s [Line %d]  \n%s\n",__PRETTY_FUNCTION__, __LINE__,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+
+#else
+
+# define DLog(...)
+
+#endif
 
 #endif /* SuperHome_pch */
