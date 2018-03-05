@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09BC05D4204CD88800D36BB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05D3204CD88800D36BB7 /* AppDelegate.m */; };
+		09BC05D7204CD88800D36BB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05D6204CD88800D36BB7 /* ViewController.m */; };
+		09BC05DA204CD88800D36BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BC05D8204CD88800D36BB7 /* Main.storyboard */; };
+		09BC05DC204CD88800D36BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BC05DB204CD88800D36BB7 /* Assets.xcassets */; };
+		09BC05DF204CD88800D36BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BC05DD204CD88800D36BB7 /* LaunchScreen.storyboard */; };
+		09BC05E2204CD88800D36BB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05E1204CD88800D36BB7 /* main.m */; };
+		A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09BC05CF204CD88800D36BB7 /* SuperHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09BC05D2204CD88800D36BB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09BC05D3204CD88800D36BB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09BC05D5204CD88800D36BB7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		09BC05D6204CD88800D36BB7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		09BC05D9204CD88800D36BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09BC05DB204CD88800D36BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09BC05DE204CD88800D36BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09BC05E0204CD88800D36BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09BC05E1204CD88800D36BB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09BC0604204CDF9E00D36BB7 /* SuperHome.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperHome.pch; sourceTree = "<group>"; };
+		43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHomeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09BC05CC204CD88800D36BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09BC05C6204CD88800D36BB7 = {
+			isa = PBXGroup;
+			children = (
+				09BC0603204CDF1F00D36BB7 /* Tools */,
+				09BC0602204CDF0100D36BB7 /* ThirdRepository */,
+				09BC05E8204CDEA800D36BB7 /* Class */,
+				09BC05D1204CD88800D36BB7 /* SuperHomeDemo */,
+				09BC05D0204CD88800D36BB7 /* Products */,
+				6A376DDE8585EF44649871E0 /* Pods */,
+				C379A8105A3B517553798137 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09BC05D0204CD88800D36BB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05CF204CD88800D36BB7 /* SuperHomeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09BC05D1204CD88800D36BB7 /* SuperHomeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05D2204CD88800D36BB7 /* AppDelegate.h */,
+				09BC05D3204CD88800D36BB7 /* AppDelegate.m */,
+				09BC05D5204CD88800D36BB7 /* ViewController.h */,
+				09BC05D6204CD88800D36BB7 /* ViewController.m */,
+				09BC05D8204CD88800D36BB7 /* Main.storyboard */,
+				09BC05DB204CD88800D36BB7 /* Assets.xcassets */,
+				09BC05DD204CD88800D36BB7 /* LaunchScreen.storyboard */,
+				09BC05E0204CD88800D36BB7 /* Info.plist */,
+				09BC05E1204CD88800D36BB7 /* main.m */,
+				09BC0604204CDF9E00D36BB7 /* SuperHome.pch */,
+			);
+			path = SuperHomeDemo;
+			sourceTree = "<group>";
+		};
+		09BC05E8204CDEA800D36BB7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05E9204CDEA800D36BB7 /* Favorite */,
+				09BC05EE204CDEA800D36BB7 /* Home */,
+				09BC05F3204CDEA800D36BB7 /* House */,
+				09BC05F8204CDEA800D36BB7 /* Profile */,
+				09BC05FD204CDEA800D36BB7 /* Wuye */,
+			);
+			name = Class;
+			path = SuperHomeDemo/Class;
+			sourceTree = "<group>";
+		};
+		09BC05E9204CDEA800D36BB7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05EA204CDEA800D36BB7 /* Controller */,
+				09BC05EB204CDEA800D36BB7 /* Model */,
+				09BC05EC204CDEA800D36BB7 /* Other */,
+				09BC05ED204CDEA800D36BB7 /* View */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		09BC05EA204CDEA800D36BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09BC05EB204CDEA800D36BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09BC05EC204CDEA800D36BB7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		09BC05ED204CDEA800D36BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09BC05EE204CDEA800D36BB7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05EF204CDEA800D36BB7 /* Controller */,
+				09BC05F0204CDEA800D36BB7 /* Model */,
+				09BC05F1204CDEA800D36BB7 /* Other */,
+				09BC05F2204CDEA800D36BB7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		09BC05EF204CDEA800D36BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09BC05F0204CDEA800D36BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09BC05F1204CDEA800D36BB7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		09BC05F2204CDEA800D36BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09BC05F3204CDEA800D36BB7 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05F4204CDEA800D36BB7 /* Controller */,
+				09BC05F5204CDEA800D36BB7 /* Model */,
+				09BC05F6204CDEA800D36BB7 /* Other */,
+				09BC05F7204CDEA800D36BB7 /* View */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
+		09BC05F4204CDEA800D36BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09BC05F5204CDEA800D36BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09BC05F6204CDEA800D36BB7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		09BC05F7204CDEA800D36BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09BC05F8204CDEA800D36BB7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05F9204CDEA800D36BB7 /* Controller */,
+				09BC05FA204CDEA800D36BB7 /* Model */,
+				09BC05FB204CDEA800D36BB7 /* Other */,
+				09BC05FC204CDEA800D36BB7 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		09BC05F9204CDEA800D36BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09BC05FA204CDEA800D36BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09BC05FB204CDEA800D36BB7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		09BC05FC204CDEA800D36BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09BC05FD204CDEA800D36BB7 /* Wuye */ = {
+			isa = PBXGroup;
+			children = (
+				09BC05FE204CDEA800D36BB7 /* Controller */,
+				09BC05FF204CDEA800D36BB7 /* Model */,
+				09BC0600204CDEA800D36BB7 /* Other */,
+				09BC0601204CDEA800D36BB7 /* View */,
+			);
+			path = Wuye;
+			sourceTree = "<group>";
+		};
+		09BC05FE204CDEA800D36BB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09BC05FF204CDEA800D36BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09BC0600204CDEA800D36BB7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		09BC0601204CDEA800D36BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09BC0602204CDF0100D36BB7 /* ThirdRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdRepository;
+			path = SuperHomeDemo/ThirdRepository;
+			sourceTree = "<group>";
+		};
+		09BC0603204CDF1F00D36BB7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tools;
+			path = SuperHomeDemo/Tools;
+			sourceTree = "<group>";
+		};
+		6A376DDE8585EF44649871E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */,
+				F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C379A8105A3B517553798137 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09BC05CE204CD88800D36BB7 /* SuperHomeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09BC05E5204CD88800D36BB7 /* Build configuration list for PBXNativeTarget "SuperHomeDemo" */;
+			buildPhases = (
+				77FE98C22CA4ED267D0AE7F1 /* [CP] Check Pods Manifest.lock */,
+				09BC05CB204CD88800D36BB7 /* Sources */,
+				09BC05CC204CD88800D36BB7 /* Frameworks */,
+				09BC05CD204CD88800D36BB7 /* Resources */,
+				3203F7A6B1BBB6341CCD218D /* [CP] Embed Pods Frameworks */,
+				4C68159217809E0400E7DD1A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperHomeDemo;
+			productName = SuperHomeDemo;
+			productReference = 09BC05CF204CD88800D36BB7 /* SuperHomeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09BC05C7204CD88800D36BB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "胡小羊";
+				TargetAttributes = {
+					09BC05CE204CD88800D36BB7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 09BC05CA204CD88800D36BB7 /* Build configuration list for PBXProject "SuperHomeDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09BC05C6204CD88800D36BB7;
+			productRefGroup = 09BC05D0204CD88800D36BB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09BC05CE204CD88800D36BB7 /* SuperHomeDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09BC05CD204CD88800D36BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BC05DF204CD88800D36BB7 /* LaunchScreen.storyboard in Resources */,
+				09BC05DC204CD88800D36BB7 /* Assets.xcassets in Resources */,
+				09BC05DA204CD88800D36BB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3203F7A6B1BBB6341CCD218D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C68159217809E0400E7DD1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77FE98C22CA4ED267D0AE7F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuperHomeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09BC05CB204CD88800D36BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BC05D7204CD88800D36BB7 /* ViewController.m in Sources */,
+				09BC05E2204CD88800D36BB7 /* main.m in Sources */,
+				09BC05D4204CD88800D36BB7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09BC05D8204CD88800D36BB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09BC05D9204CD88800D36BB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09BC05DD204CD88800D36BB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09BC05DE204CD88800D36BB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09BC05E3204CD88800D36BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09BC05E4204CD88800D36BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09BC05E6204CD88800D36BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SuperHomeDemo/SuperHome.pch";
+				INFOPLIST_FILE = SuperHomeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiqu.SuperHomeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09BC05E7204CD88800D36BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SuperHomeDemo/SuperHome.pch";
+				INFOPLIST_FILE = SuperHomeDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiqu.SuperHomeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09BC05CA204CD88800D36BB7 /* Build configuration list for PBXProject "SuperHomeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09BC05E3204CD88800D36BB7 /* Debug */,
+				09BC05E4204CD88800D36BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09BC05E5204CD88800D36BB7 /* Build configuration list for PBXNativeTarget "SuperHomeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09BC05E6204CD88800D36BB7 /* Debug */,
+				09BC05E7204CD88800D36BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09BC05C7204CD88800D36BB7 /* Project object */;
+}

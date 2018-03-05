@@ -1,0 +1,55 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - IQKeyboardManager (5.0.7)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.15.3)
+  - SDAutoLayout (2.2.0)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.3.0):
+    - SDWebImage/Core (= 4.3.0)
+  - SDWebImage/Core (4.3.0)
+  - WRNavigationBar (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - FMDB
+  - IQKeyboardManager
+  - MBProgressHUD
+  - MJRefresh
+  - SDAutoLayout
+  - SDCycleScrollView
+  - SDWebImage
+  - WRNavigationBar (~> 1.0.9)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
+  WRNavigationBar: 8e02b9701431fa1ed7ae72bd4370103f0b5e4b5d
+
+PODFILE CHECKSUM: e5768e87f77e6b4582c225996a5539ae77bec328
+
+COCOAPODS: 1.4.0.beta.2
