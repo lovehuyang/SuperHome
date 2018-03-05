@@ -42,11 +42,6 @@
     [self setupCustomTabbar];
     [self setupAllChildViewControllers];
     
-//    // 添加定时器，读取未读消息数
-//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkUnreadCount) userInfo:nil repeats:YES];
-//    // 把定时器添加到子线程，防止阻塞主线程
-//    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    
 }
 
 /*
@@ -86,21 +81,21 @@
 {
     // 首页
     HomeViewController *homePageVC = [[HomeViewController alloc] init];
-    [self setupChildViewController:homePageVC title:@"首页" normalImage:[UIImage imageNamed:@"nav_index_x"] selectImage:[UIImage imageNamed:@"nav_index"]];
+    [self setupChildViewController:homePageVC title:@"首页" normalImage:[UIImage imageNamed:@"tabbar_home_os7"] selectImage:[UIImage imageNamed:@"tabbar_home_selected_os7"]];
     self.home = homePageVC;
     
     // 物业
     WuYeViewController *wuye = [[WuYeViewController alloc] init];
-    [self setupChildViewController:wuye title:@"物业" normalImage:[UIImage imageNamed:@"nav_index_x"] selectImage:[UIImage imageNamed:@"nav_index"]];
+    [self setupChildViewController:wuye title:@"物业" normalImage:[UIImage imageNamed:@"tabbar_discover_os7"] selectImage:[UIImage imageNamed:@"tabbar_discover_selected_os7"]];
     self.wuye = wuye;
     
     //
     FavoriteViewController *favoriteVC = [[FavoriteViewController alloc] init];
-    [self setupChildViewController:favoriteVC title:@"收藏" normalImage:[UIImage imageNamed:@"nav_activity_x"] selectImage:[UIImage imageNamed:@"nav_activity"]];
+    [self setupChildViewController:favoriteVC title:@"收藏" normalImage:[UIImage imageNamed:@"tabbar_message_center_os7"] selectImage:[UIImage imageNamed:@"tabbar_message_center_selected_os7"]];
     self.patientManager = favoriteVC;
     
     ProfileViewController *mineVC = [[ProfileViewController alloc] init];
-    [self setupChildViewController:mineVC title:@"我的" normalImage:[UIImage imageNamed:@"nav_setup_x"] selectImage:[UIImage imageNamed:@"nav_setup"]];
+    [self setupChildViewController:mineVC title:@"我的" normalImage:[UIImage imageNamed:@"tabbar_profile_os7"] selectImage:[UIImage imageNamed:@"tabbar_profile_selected_os7"]];
     self.mine = mineVC;
 }
 

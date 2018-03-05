@@ -34,8 +34,8 @@
 
         //添加一个“+”按钮
         PlusButton *plusButton = [PlusButton buttonWithType:UIButtonTypeCustom];
-        [plusButton setImage:[UIImage imageNamed:@"activity_ing"] forState:UIControlStateNormal];
-        [plusButton setImage:[UIImage imageNamed:@"activity_ing"] forState:UIControlStateHighlighted];
+        [plusButton setImage:[UIImage imageNamed:@"tabbar_discover_os7"] forState:UIControlStateNormal];
+        [plusButton setImage:[UIImage imageNamed:@"tabbar_discover_selected_os7"] forState:UIControlStateHighlighted];
         [self addSubview:plusButton];
         [plusButton setBackgroundColor:[UIColor whiteColor]];
         plusButton.bounds = CGRectMake(0, 0, 60, 60);
