@@ -10,6 +10,8 @@
 #import <SDCycleScrollView.h>
 #import <MMScan/MMScanViewController.h>
 #import "UIScrollView+JElasticPullToRefresh.h"// 下拉刷新
+#import "SectionTitleLab.h"
+#import "NewsListCell.h"
 
 #define IMG_H  150.0/375*ScrW // 顶部轮播图高度
 @interface HomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -81,6 +83,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.section == 1) {
+        static NSString *homeCell = @"home_News_cell";
+        NewsListCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCell];
+        if (!cell) {
+            cell = [[NewsListCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:homeCell];
+        }
+        return cell;
+    }
+    
     static NSString *homeCell = @"home_cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCell];
     if (!cell) {
@@ -91,15 +102,40 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 2;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 0;
+    }
+    return 40;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return nil;
+    }
+    UIView *view = [UIView new];
+    view.backgroundColor = Color_Back_Gray;
+    view.frame = CGRectMake(0, 0, ScrW, 40);
+    SectionTitleLab *lab = [[SectionTitleLab alloc]initWithFrame:CGRectMake(0, 10, view.frame.size.width, 30) title:@"推荐新闻"];
+    [view addSubview:lab];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        return 100;
+    }
+    return 40;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 1;
+    }
+    return 5;
+}
 
 #pragma mark - SDCycleScrollViewDelegate
 
