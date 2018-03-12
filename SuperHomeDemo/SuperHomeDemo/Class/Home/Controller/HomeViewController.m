@@ -13,9 +13,11 @@
 #import "SectionTitleLab.h"
 #import "NewsListCell.h"
 #import "MainBtnCell.h"
+#import "AutoScrollLabel.h" // 跑马灯
 
 #define IMG_H  150.0/375*ScrW // 顶部轮播图高度
 @interface HomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic ,strong)AutoScrollLabel *communityName;
 @property (nonatomic ,strong) UITableView *tableView;
 @property (nonatomic ,strong) SDCycleScrollView *tableHeadView;// 顶部轮播图
 @property (nonatomic ,strong) UIView *mainBtnView;// 主功能按钮的容器
@@ -25,6 +27,18 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"saoyisao"] style:UIBarButtonItemStylePlain target:self action:@selector(saoyisaoEvent)];
+        self.communityName = [[AutoScrollLabel alloc]init];
+        self.communityName.text = @"hahahh hahahhhahahhhahahhhahahhhahahhhahahh";
+        self.communityName.frame = CGRectMake(0, 0, 200, 44);
+        self.communityName.backgroundColor = [UIColor redColor];
+        
+        UILabel *tempLab = [UILabel new];
+        tempLab.frame = CGRectMake(0, 0, 100, 44);
+        tempLab.text = @"我是首页";
+        self.navigationItem.titleView.backgroundColor = [UIColor yellowColor];
+//        self.navigationItem.titleView = tempLab;
+//        [tempLab addSubview:self.communityName];
+        
     }
     return self;
 }

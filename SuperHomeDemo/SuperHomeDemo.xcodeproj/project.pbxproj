@@ -49,6 +49,8 @@
 		09F40CE1205650D200A4E7B6 /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE0205650D200A4E7B6 /* NewsListCell.m */; };
 		09F40CE420565A0800A4E7B6 /* MainBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE320565A0800A4E7B6 /* MainBtnCell.m */; };
 		09F40CE720565FFE00A4E7B6 /* MainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE620565FFE00A4E7B6 /* MainButton.m */; };
+		09F40CF5205680B300A4E7B6 /* AutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CF3205680B300A4E7B6 /* AutoScrollLabel.m */; };
+		09F40CF6205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 09F40CF4205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf */; };
 		A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +143,9 @@
 		09F40CE320565A0800A4E7B6 /* MainBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBtnCell.m; sourceTree = "<group>"; };
 		09F40CE520565FFE00A4E7B6 /* MainButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainButton.h; sourceTree = "<group>"; };
 		09F40CE620565FFE00A4E7B6 /* MainButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainButton.m; sourceTree = "<group>"; };
+		09F40CF2205680B300A4E7B6 /* AutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScrollLabel.h; sourceTree = "<group>"; };
+		09F40CF3205680B300A4E7B6 /* AutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScrollLabel.m; sourceTree = "<group>"; };
+		09F40CF4205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "AutoScrollLabel使用步骤.rtf"; sourceTree = "<group>"; };
 		43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHomeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +284,7 @@
 		09D41E9A204D56BE009B1326 /* ThirdRepository */ = {
 			isa = PBXGroup;
 			children = (
+				09F40CF1205680B300A4E7B6 /* YHTScrollLabel */,
 				09F40CCB20562A9C00A4E7B6 /* JElasticPullToRefresh */,
 				09D41E9B204D56C6009B1326 /* TabbarAndNavigationBar */,
 			);
@@ -666,6 +672,16 @@
 			path = JElasticPullToRefresh;
 			sourceTree = "<group>";
 		};
+		09F40CF1205680B300A4E7B6 /* YHTScrollLabel */ = {
+			isa = PBXGroup;
+			children = (
+				09F40CF2205680B300A4E7B6 /* AutoScrollLabel.h */,
+				09F40CF3205680B300A4E7B6 /* AutoScrollLabel.m */,
+				09F40CF4205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf */,
+			);
+			path = YHTScrollLabel;
+			sourceTree = "<group>";
+		};
 		6A376DDE8585EF44649871E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,6 +761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09BC05DF204CD88800D36BB7 /* LaunchScreen.storyboard in Resources */,
+				09F40CF6205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf in Resources */,
 				09BC05DC204CD88800D36BB7 /* Assets.xcassets in Resources */,
 				09BC05DA204CD88800D36BB7 /* Main.storyboard in Resources */,
 			);
@@ -849,6 +866,7 @@
 				09D41EDF204D56C6009B1326 /* PlusButton.m in Sources */,
 				09D41F06204D5A30009B1326 /* ProfileViewController.m in Sources */,
 				09D41EE0204D56C6009B1326 /* systemTabbar.m in Sources */,
+				09F40CF5205680B300A4E7B6 /* AutoScrollLabel.m in Sources */,
 				09D41ED6204D56C6009B1326 /* SetupTools.m in Sources */,
 				09F40CDE20562F7F00A4E7B6 /* SectionTitleLab.m in Sources */,
 				09D41F00204D5A13009B1326 /* HomeViewController.m in Sources */,
