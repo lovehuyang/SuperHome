@@ -40,6 +40,11 @@
 		09D41F0C204D5A4B009B1326 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D41F0B204D5A4B009B1326 /* FavoriteViewController.m */; };
 		09D41F0F204D5C33009B1326 /* GlobalTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D41F0D204D5C33009B1326 /* GlobalTools.m */; };
 		09D41F17204D5C85009B1326 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D41F16204D5C85009B1326 /* LoginViewController.m */; };
+		09F40CD720562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CCE20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.m */; };
+		09F40CD820562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CD020562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m */; };
+		09F40CD920562A9C00A4E7B6 /* JElasticPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CD220562A9C00A4E7B6 /* JElasticPullToRefreshView.m */; };
+		09F40CDA20562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CD420562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.m */; };
+		09F40CDB20562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CD620562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m */; };
 		A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +118,17 @@
 		09D41F0E204D5C33009B1326 /* GlobalTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalTools.h; sourceTree = "<group>"; };
 		09D41F15204D5C85009B1326 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		09D41F16204D5C85009B1326 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		09F40CCC20562A9C00A4E7B6 /* JElasticPullToRefreshConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JElasticPullToRefreshConstants.h; sourceTree = "<group>"; };
+		09F40CCD20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JElasticPullToRefreshLoadingView.h; sourceTree = "<group>"; };
+		09F40CCE20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JElasticPullToRefreshLoadingView.m; sourceTree = "<group>"; };
+		09F40CCF20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JElasticPullToRefreshLoadingViewCircle.h; sourceTree = "<group>"; };
+		09F40CD020562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JElasticPullToRefreshLoadingViewCircle.m; sourceTree = "<group>"; };
+		09F40CD120562A9C00A4E7B6 /* JElasticPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JElasticPullToRefreshView.h; sourceTree = "<group>"; };
+		09F40CD220562A9C00A4E7B6 /* JElasticPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JElasticPullToRefreshView.m; sourceTree = "<group>"; };
+		09F40CD320562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JElasticPullToRefresh.h"; sourceTree = "<group>"; };
+		09F40CD420562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JElasticPullToRefresh.m"; sourceTree = "<group>"; };
+		09F40CD520562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JElasticPullToRefresh.h"; sourceTree = "<group>"; };
+		09F40CD620562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JElasticPullToRefresh.m"; sourceTree = "<group>"; };
 		43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHomeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +267,7 @@
 		09D41E9A204D56BE009B1326 /* ThirdRepository */ = {
 			isa = PBXGroup;
 			children = (
+				09F40CCB20562A9C00A4E7B6 /* JElasticPullToRefresh */,
 				09D41E9B204D56C6009B1326 /* TabbarAndNavigationBar */,
 			);
 			name = ThirdRepository;
@@ -611,6 +628,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		09F40CCB20562A9C00A4E7B6 /* JElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				09F40CCC20562A9C00A4E7B6 /* JElasticPullToRefreshConstants.h */,
+				09F40CCD20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.h */,
+				09F40CCE20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.m */,
+				09F40CCF20562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.h */,
+				09F40CD020562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m */,
+				09F40CD120562A9C00A4E7B6 /* JElasticPullToRefreshView.h */,
+				09F40CD220562A9C00A4E7B6 /* JElasticPullToRefreshView.m */,
+				09F40CD320562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.h */,
+				09F40CD420562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.m */,
+				09F40CD520562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.h */,
+				09F40CD620562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m */,
+			);
+			path = JElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
 		6A376DDE8585EF44649871E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,21 +799,26 @@
 				09D41EDB204D56C6009B1326 /* customNaviController.m in Sources */,
 				09BC05D7204CD88800D36BB7 /* ViewController.m in Sources */,
 				09D41EE2204D56C6009B1326 /* tabbarButton.m in Sources */,
+				09F40CDA20562A9C00A4E7B6 /* UIScrollView+JElasticPullToRefresh.m in Sources */,
 				09D41F0F204D5C33009B1326 /* GlobalTools.m in Sources */,
 				09D41ED2204D56C6009B1326 /* UIColor+HXY.m in Sources */,
 				09BC05E2204CD88800D36BB7 /* main.m in Sources */,
 				09D41ED3204D56C6009B1326 /* UIImage+LYZ.m in Sources */,
 				09D41ED8204D56C6009B1326 /* LanchModel.m in Sources */,
 				09D41ED9204D56C6009B1326 /* LanchViewManger.m in Sources */,
+				09F40CD820562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
 				09D41EDC204D56C6009B1326 /* NewFeatureViewController.m in Sources */,
 				09D41EE1204D56C6009B1326 /* tabbarBadgeButton.m in Sources */,
 				09D41F17204D5C85009B1326 /* LoginViewController.m in Sources */,
 				09D41ED0204D56C6009B1326 /* NSString+isoEncoding.m in Sources */,
 				09D41F0C204D5A4B009B1326 /* FavoriteViewController.m in Sources */,
 				09D41EDD204D56C6009B1326 /* RootViewController.m in Sources */,
+				09F40CD720562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.m in Sources */,
 				09D41ED7204D56C6009B1326 /* MBProgressHUD+NHAdd.m in Sources */,
 				09D41F03204D5A22009B1326 /* HouseViewController.m in Sources */,
+				09F40CDB20562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m in Sources */,
 				09D41EDE204D56C6009B1326 /* customTabbar.m in Sources */,
+				09F40CD920562A9C00A4E7B6 /* JElasticPullToRefreshView.m in Sources */,
 				09D41EE9204D58E5009B1326 /* UIColor+HLY.m in Sources */,
 				09D41ED1204D56C6009B1326 /* NSTimer+Addition.m in Sources */,
 				09D41F09204D5A3D009B1326 /* WuYeViewController.m in Sources */,

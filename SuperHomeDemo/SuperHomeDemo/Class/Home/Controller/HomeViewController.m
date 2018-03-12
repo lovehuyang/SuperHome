@@ -9,9 +9,10 @@
 #import "HomeViewController.h"
 #import <SDCycleScrollView.h>
 #import <MMScan/MMScanViewController.h>
+#import "UIScrollView+JElasticPullToRefresh.h"// 下拉刷新
 
 #define IMG_H  150.0/375*ScrW // 顶部轮播图高度
-@interface HomeViewController ()<SDCycleScrollViewDelegate>
+@interface HomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) UITableView *tableView;
 @property (nonatomic ,strong) SDCycleScrollView *tableHeadView;// 顶部轮播图
 @end
@@ -26,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    [self addRefreashAnimation];// 添加下拉刷新
     [self loadScrollViewData];// 加载轮播图数据
 }
 
@@ -34,6 +36,8 @@
     if (!_tableView) {
         DLog(@"%f",Hight_TOP);
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScrW, ScrH - Hight_TOP - Hight_Tabbar) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
         _tableView.tableHeaderView = self.tableHeadView;
     }
     return _tableView;
@@ -46,10 +50,23 @@
         _tableHeadView.showPageControl = YES;
         _tableHeadView.autoScrollTimeInterval = 5;
         _tableHeadView.backgroundColor = [UIColor lightGrayColor];
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableHeadView;
 }
-
+#pragma mark - 下拉刷新
+- (void)addRefreashAnimation{
+    JElasticPullToRefreshLoadingViewCircle *loadingViewCircle = [[JElasticPullToRefreshLoadingViewCircle alloc] init];
+    loadingViewCircle.tintColor = [UIColor whiteColor];
+    __weak __typeof(self)weakSelf = self;
+    [self.tableView addJElasticPullToRefreshViewWithActionHandler:^{
+        
+        [weakSelf.tableView stopLoading];
+        
+    } LoadingView:loadingViewCircle];
+    [self.tableView setJElasticPullToRefreshFillColor:Color_Theme];
+    [self.tableView setJElasticPullToRefreshBackgroundColor:self.tableView.backgroundColor];
+}
 #pragma mark - 加载轮播图数据
 
 - (void)loadScrollViewData{
@@ -59,8 +76,34 @@
         self.tableHeadView.imageURLStringsGroup = @[@"https://www.doc-sign.com/skin/images/5892845.png",@"https://www.doc-sign.com/skin/images/23130375.jpg",@"https://www.doc-sign.com/skin/images/1742141.jpg",@"https://www.doc-sign.com/skin/images/5892845.png",@"https://www.doc-sign.com/skin/images/23130375.jpg",@"https://www.doc-sign.com/skin/images/1742141.jpg"];
     });
 }
+
+#pragma mark - UITableViewDelegate,UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *homeCell = @"home_cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCell];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:homeCell];
+    }
+    cell.textLabel.text = @"hahah";
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 5;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+
+
 #pragma mark - SDCycleScrollViewDelegate
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index{
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     DLog(@"点击了 - %ld",(long)index);
 }
 
