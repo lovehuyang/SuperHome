@@ -17,6 +17,7 @@
 #import "ConfigHeader.h"
 #import "CommonDataHeader.h"
 #import <SDAutoLayout.h>
+#import <PPBadgeView.h>
 
 
 

@@ -12,11 +12,13 @@
 #import "UIScrollView+JElasticPullToRefresh.h"// 下拉刷新
 #import "SectionTitleLab.h"
 #import "NewsListCell.h"
+#import "MainBtnCell.h"
 
 #define IMG_H  150.0/375*ScrW // 顶部轮播图高度
 @interface HomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) UITableView *tableView;
 @property (nonatomic ,strong) SDCycleScrollView *tableHeadView;// 顶部轮播图
+@property (nonatomic ,strong) UIView *mainBtnView;// 主功能按钮的容器
 @end
 
 @implementation HomeViewController
@@ -89,15 +91,20 @@
         if (!cell) {
             cell = [[NewsListCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:homeCell];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     
     static NSString *homeCell = @"home_cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCell];
+    MainBtnCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCell];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:homeCell];
+        cell = [[MainBtnCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:homeCell];
     }
-    cell.textLabel.text = @"hahah";
+    cell.mainBtnClick = ^(NSInteger btnTag) {
+        DLog(@"功能主键：%ld",(long)btnTag);
+    };
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -128,7 +135,7 @@
     if (indexPath.section == 1) {
         return 100;
     }
-    return 40;
+    return ScrW/4 * 2;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {

@@ -9,7 +9,13 @@
 #import "NewsListCell.h"
 
 @implementation NewsListCell
+{
+    UIImageView *imgView;
+    UILabel *titleLab;
+    UILabel *timeLab;
+    UILabel *commentLab;
 
+}
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setupAllSubViews];
@@ -19,38 +25,36 @@
 
 - (void)setupAllSubViews{
     
-    UIImageView *imgView = [UIImageView new];
+    imgView = [UIImageView new];
     [self.contentView addSubview:imgView];
     imgView.sd_layout
     .leftSpaceToView(self.contentView, 10)
     .topSpaceToView(self.contentView, 10)
     .bottomSpaceToView(self.contentView, 10)
     .widthIs(115);
-    imgView.image = [UIImage imageNamed:@"banner_placeholder"];
     
-    UILabel *titleLab = [UILabel new];
+    titleLab = [UILabel new];
     [self.contentView addSubview:titleLab];
     titleLab.sd_layout.leftSpaceToView(imgView, 15)
     .topEqualToView(imgView)
     .rightSpaceToView(self.contentView, 15)
     .autoHeightRatio(0);
     titleLab.sd_layout.maxHeightIs(45);
-    titleLab.text = @"哈哈哈阿萨德飞机熬时间佛我安吉尔我房间奥尔发金额非Jane方能完成问佛女王呢按安分安神佛那我放纳森";
     titleLab.font = [UIFont systemFontOfSize:15];
     
-    UILabel *timeLab = [UILabel new];
+    timeLab = [UILabel new];
     [self.contentView addSubview:timeLab];
     timeLab.sd_layout
     .leftEqualToView(titleLab)
     .bottomSpaceToView(self.contentView, 10)
     .heightIs(15);
     [timeLab setSingleLineAutoResizeWithMaxWidth:200];
-    timeLab.text = @"2018-10-30";
+    
 //    timeLab.backgroundColor = [UIColor redColor];
     timeLab.font = [UIFont systemFontOfSize:12];
-    timeLab.textColor = HXYGetColor(@"#666666");
+    timeLab.textColor = Color_Text_Gray;
     
-    UILabel *commentLab = [UILabel new];
+    commentLab = [UILabel new];
     [self.contentView addSubview:commentLab];
     commentLab.sd_layout
     .leftSpaceToView(timeLab, 15)
@@ -59,6 +63,15 @@
     .rightSpaceToView(self.contentView, 10);
     commentLab.textColor = timeLab.textColor;
     commentLab.font = timeLab.font;
+    
+    
+    [self setValue];
+}
+
+- (void)setValue{
+    imgView.image = [UIImage imageNamed:@"banner_placeholder"];
+    titleLab.text = @"我是标题我是标题我是标题我是标题我是";
+    timeLab.text = @"2018-10-30";
     commentLab.text = [NSString stringWithFormat:@"%d评论",540];
 }
 @end

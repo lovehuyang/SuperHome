@@ -47,6 +47,8 @@
 		09F40CDB20562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CD620562A9C00A4E7B6 /* UIView+JElasticPullToRefresh.m */; };
 		09F40CDE20562F7F00A4E7B6 /* SectionTitleLab.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CDD20562F7F00A4E7B6 /* SectionTitleLab.m */; };
 		09F40CE1205650D200A4E7B6 /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE0205650D200A4E7B6 /* NewsListCell.m */; };
+		09F40CE420565A0800A4E7B6 /* MainBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE320565A0800A4E7B6 /* MainBtnCell.m */; };
+		09F40CE720565FFE00A4E7B6 /* MainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE620565FFE00A4E7B6 /* MainButton.m */; };
 		A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +137,10 @@
 		09F40CDD20562F7F00A4E7B6 /* SectionTitleLab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionTitleLab.m; sourceTree = "<group>"; };
 		09F40CDF205650D200A4E7B6 /* NewsListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsListCell.h; sourceTree = "<group>"; };
 		09F40CE0205650D200A4E7B6 /* NewsListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsListCell.m; sourceTree = "<group>"; };
+		09F40CE220565A0800A4E7B6 /* MainBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBtnCell.h; sourceTree = "<group>"; };
+		09F40CE320565A0800A4E7B6 /* MainBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBtnCell.m; sourceTree = "<group>"; };
+		09F40CE520565FFE00A4E7B6 /* MainButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainButton.h; sourceTree = "<group>"; };
+		09F40CE620565FFE00A4E7B6 /* MainButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainButton.m; sourceTree = "<group>"; };
 		43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHomeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -480,6 +486,10 @@
 				09F40CDD20562F7F00A4E7B6 /* SectionTitleLab.m */,
 				09F40CDF205650D200A4E7B6 /* NewsListCell.h */,
 				09F40CE0205650D200A4E7B6 /* NewsListCell.m */,
+				09F40CE220565A0800A4E7B6 /* MainBtnCell.h */,
+				09F40CE320565A0800A4E7B6 /* MainBtnCell.m */,
+				09F40CE520565FFE00A4E7B6 /* MainButton.h */,
+				09F40CE620565FFE00A4E7B6 /* MainButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -804,6 +814,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41ED5204D56C6009B1326 /* UIView+Extension.m in Sources */,
+				09F40CE720565FFE00A4E7B6 /* MainButton.m in Sources */,
 				09D41EDA204D56C6009B1326 /* LaunchView.m in Sources */,
 				09D41ED4204D56C6009B1326 /* UILabel+LYZ.m in Sources */,
 				09D41EDB204D56C6009B1326 /* customNaviController.m in Sources */,
@@ -814,6 +825,7 @@
 				09D41ED2204D56C6009B1326 /* UIColor+HXY.m in Sources */,
 				09BC05E2204CD88800D36BB7 /* main.m in Sources */,
 				09D41ED3204D56C6009B1326 /* UIImage+LYZ.m in Sources */,
+				09F40CE420565A0800A4E7B6 /* MainBtnCell.m in Sources */,
 				09D41ED8204D56C6009B1326 /* LanchModel.m in Sources */,
 				09D41ED9204D56C6009B1326 /* LanchViewManger.m in Sources */,
 				09F40CD820562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,

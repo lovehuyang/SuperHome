@@ -18,7 +18,7 @@
 //常用颜色
 #define Color_Theme HXYGetColor(@"#3F60C1")// 主题色
 #define Color_Back_Gray HXYGetColor(@"#F6F6F6")// 背景灰色
-#define Color_Text_Gray HXYGetColor(@"#7F7F7F")// 字体灰色
+#define Color_Text_Gray HXYGetColor(@"#666666")// 字体灰色
 
 // 常用值
 #define Hight_TOP [GlobalTools getStatusAndNavHight]
