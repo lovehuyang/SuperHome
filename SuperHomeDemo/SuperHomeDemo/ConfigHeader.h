@@ -16,8 +16,12 @@
 
 
 //常用颜色
-#define Color_Theme HXYGetColor(@"#BD0220")// 主题色
+#define Color_Theme HXYGetColor(@"#3F60C1")// 主题色
 #define Color_Back_Gray HXYGetColor(@"#EAEAEA")// 背景灰色
 #define Color_Text_Gray HXYGetColor(@"#7F7F7F")// 字体灰色
 
+// 常用值
+#define Hight_TOP [GlobalTools getStatusAndNavHight]
+#define Hight_Status [GlobalTools getStatusHight]//状态栏 + 导航栏高度
+#define Hight_Tabbar [GlobalTools getTabbarHight]// tabbar的高度
 #endif /* ConfigHeader_h */

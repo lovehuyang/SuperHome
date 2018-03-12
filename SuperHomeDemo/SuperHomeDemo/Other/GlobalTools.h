@@ -56,6 +56,13 @@
 + (CGFloat)getStatusAndNavHight;
 
 /**
+ 获取tabbar的高度
+ 
+ @return tabbar的高度
+ */
++ (CGFloat) getTabbarHight;
+
+/**
  计算文字的的长度
  
  @param text 文字

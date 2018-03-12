@@ -43,6 +43,8 @@
         plusButton.layer.masksToBounds = YES;
         self.plusButton = plusButton;
         [self.plusButton addTarget:self action:@selector(plusButtonClick) forControlEvents:UIControlEventTouchUpInside];
+//        [self.plusButton setTitle:@"房屋" forState:UIControlStateNormal];
+//        [self.plusButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [self drawCircle];
 
     }

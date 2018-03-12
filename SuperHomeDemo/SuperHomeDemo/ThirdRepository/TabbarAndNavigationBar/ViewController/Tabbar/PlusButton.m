@@ -12,7 +12,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
+        self.imageView.backgroundColor = [UIColor redColor];
+        self.titleLabel.backgroundColor = [UIColor blueColor];
     }
     return self;
 }
