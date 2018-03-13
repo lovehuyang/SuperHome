@@ -17,7 +17,7 @@
 
 #define IMG_H  150.0/375*ScrW // 顶部轮播图高度
 @interface HomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic ,strong)AutoScrollLabel *communityName;
+@property (nonatomic ,strong)AutoScrollLabel *autoScrollLabel;
 @property (nonatomic ,strong) UITableView *tableView;
 @property (nonatomic ,strong) SDCycleScrollView *tableHeadView;// 顶部轮播图
 @property (nonatomic ,strong) UIView *mainBtnView;// 主功能按钮的容器
@@ -27,28 +27,29 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"saoyisao"] style:UIBarButtonItemStylePlain target:self action:@selector(saoyisaoEvent)];
-        self.communityName = [[AutoScrollLabel alloc]init];
-        self.communityName.text = @"hahahh hahahhhahahhhahahhhahahhhahahhhahahh";
-        self.communityName.frame = CGRectMake(0, 0, 200, 44);
-        self.communityName.backgroundColor = [UIColor redColor];
-        
-        UILabel *tempLab = [UILabel new];
-        tempLab.frame = CGRectMake(0, 0, 100, 44);
-        tempLab.text = @"我是首页";
-        self.navigationItem.titleView.backgroundColor = [UIColor yellowColor];
-//        self.navigationItem.titleView = tempLab;
-//        [tempLab addSubview:self.communityName];
-        
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(autoScrollLabelScroll) name:NOTIFICATION_AUTOSCROLLLAB object:nil];
     [self.view addSubview:self.tableView];
     [self addRefreashAnimation];// 添加下拉刷新
     [self loadScrollViewData];// 加载轮播图数据
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    AutoScrollLabel *autoScrollLabel = [[AutoScrollLabel alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
+    autoScrollLabel.text = @"XXX小区X号楼X单元XXX室";
+    autoScrollLabel.textColor = [UIColor whiteColor];
+    self.autoScrollLabel = autoScrollLabel;
+    self.navigationItem.titleView = self.autoScrollLabel;
+}
+
+- (void)autoScrollLabelScroll{
+    [self.autoScrollLabel scroll];
+}
 #pragma mark - 懒加载
 - (UITableView *)tableView{
     if (!_tableView) {
