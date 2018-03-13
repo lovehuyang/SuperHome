@@ -7,31 +7,110 @@
 //
 
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
+#import "CustomNavView.h"
+#import "InputTextField.h"
 
+#define Hight_NAV 120
 @interface LoginViewController ()
-
+{
+    UITextField *userPhone_TF;
+    UITextField *password_TF;
+}
 @end
 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self createNavBar];// 创建导航栏
+    [self createTextField];// 创建文本框
+}
+- (void)createTextField{
+    
+    NSArray *placeholder = @[@"请输入手机号码/账号",@"请输入密码"];
+    for(int i=0; i<2; i++){
+        
+        InputTextField *tf = [[InputTextField alloc]init];;
+        [self.view addSubview:tf];
+        tf.font = [UIFont systemFontOfSize:14];
+        tf.sd_layout
+        .leftSpaceToView(self.view, 25)
+        .rightSpaceToView(self.view, 25)
+        .topSpaceToView(self.view, 150 + 45 *i)
+        .heightIs(30);
+        
+        tf.placeholder = placeholder[i];
+        tf.clearButtonMode = UITextFieldViewModeWhileEditing;
+        if(i == 0){
+            userPhone_TF = tf;
+            userPhone_TF.keyboardType = UIKeyboardTypeNumberPad;
+        }else{
+            password_TF = tf;
+            password_TF.secureTextEntry = YES;
+        }
+        [self.view addSubview:tf];
+    }
+
+    // 登录按钮
+    UIButton *loginBtn = [UIButton new];
+    [self.view addSubview:loginBtn];
+    loginBtn.sd_layout
+    .topSpaceToView(password_TF, 50)
+    .leftSpaceToView(self.view, 25)
+    .rightSpaceToView(self.view, 25)
+    .heightIs(45);
+    [loginBtn setBackgroundImage:[UIImage imageNamed:@"Rectangle"] forState:UIControlStateNormal];
+    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [loginBtn addTarget:self action:@selector(loginEvent) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *registerBtn = [UIButton new];
+    [self.view addSubview:registerBtn];
+    registerBtn.sd_layout
+    .topSpaceToView(loginBtn, 17)
+    .leftEqualToView(loginBtn)
+    .widthIs(60)
+    .heightIs(20);
+    [registerBtn setTitle:@"注册账号" forState:UIControlStateNormal];
+    registerBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    registerBtn.tag = 10;
+    [registerBtn setTitleColor:Color_Text_Gray forState:UIControlStateNormal];
+    [registerBtn addTarget:self action:@selector(registerBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *forgetBtn = [UIButton new];
+    [self.view addSubview:forgetBtn];
+    forgetBtn.sd_layout
+    .topSpaceToView(loginBtn, 17)
+    .rightEqualToView(loginBtn)
+    .widthIs(60)
+    .heightIs(20);
+    [forgetBtn setTitle:@"找回密码" forState:UIControlStateNormal];
+    forgetBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    forgetBtn.tag = 11;
+    [forgetBtn setTitleColor:Color_Text_Gray forState:UIControlStateNormal];
+    [forgetBtn addTarget:self action:@selector(registerBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+#pragma mark - 创建导航栏
+- (void)createNavBar{
+    CustomNavView *navBar = [[CustomNavView alloc]initWithFrame:CGRectMake(0, 0, ScrW, Hight_NAV) title:@"登录"];
+    navBar.backgroundColor = [UIColor orangeColor];
+    navBar.returnEvent = ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
+    [self.view addSubview:navBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 登录
+- (void)loginEvent{
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - 注册账号/忘记密码
+- (void)registerBtnClick:(UIButton *)btn{
+    RegisterViewController *rvc = [[RegisterViewController alloc]init];
+    rvc.page_Type = btn.tag - 10;
+    [self presentViewController:rvc animated:YES completion:nil];
+    
 }
-*/
 
 @end

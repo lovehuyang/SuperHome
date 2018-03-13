@@ -51,6 +51,11 @@
 		09F40CE720565FFE00A4E7B6 /* MainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CE620565FFE00A4E7B6 /* MainButton.m */; };
 		09F40CF5205680B300A4E7B6 /* AutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CF3205680B300A4E7B6 /* AutoScrollLabel.m */; };
 		09F40CF6205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 09F40CF4205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf */; };
+		09F40CF92057649E00A4E7B6 /* CustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CF72057649E00A4E7B6 /* CustomNavView.m */; };
+		09F40CFC2057691D00A4E7B6 /* InputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40CFB2057691D00A4E7B6 /* InputTextField.m */; };
+		09F40D022057717500A4E7B6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D012057717500A4E7B6 /* RegisterViewController.m */; };
+		09F40D052057953200A4E7B6 /* RegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D032057953200A4E7B6 /* RegisterTextField.m */; };
+		09F40D08205797A700A4E7B6 /* RegisterTextField2.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D07205797A700A4E7B6 /* RegisterTextField2.m */; };
 		A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +151,16 @@
 		09F40CF2205680B300A4E7B6 /* AutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScrollLabel.h; sourceTree = "<group>"; };
 		09F40CF3205680B300A4E7B6 /* AutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScrollLabel.m; sourceTree = "<group>"; };
 		09F40CF4205680B300A4E7B6 /* AutoScrollLabel使用步骤.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "AutoScrollLabel使用步骤.rtf"; sourceTree = "<group>"; };
+		09F40CF72057649E00A4E7B6 /* CustomNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavView.m; sourceTree = "<group>"; };
+		09F40CF82057649E00A4E7B6 /* CustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavView.h; sourceTree = "<group>"; };
+		09F40CFA2057691D00A4E7B6 /* InputTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputTextField.h; sourceTree = "<group>"; };
+		09F40CFB2057691D00A4E7B6 /* InputTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputTextField.m; sourceTree = "<group>"; };
+		09F40D002057717500A4E7B6 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		09F40D012057717500A4E7B6 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		09F40D032057953200A4E7B6 /* RegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTextField.m; sourceTree = "<group>"; };
+		09F40D042057953200A4E7B6 /* RegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTextField.h; sourceTree = "<group>"; };
+		09F40D06205797A700A4E7B6 /* RegisterTextField2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTextField2.h; sourceTree = "<group>"; };
+		09F40D07205797A700A4E7B6 /* RegisterTextField2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTextField2.m; sourceTree = "<group>"; };
 		43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHomeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -629,6 +644,8 @@
 			children = (
 				09D41F15204D5C85009B1326 /* LoginViewController.h */,
 				09D41F16204D5C85009B1326 /* LoginViewController.m */,
+				09F40D002057717500A4E7B6 /* RegisterViewController.h */,
+				09F40D012057717500A4E7B6 /* RegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,6 +667,14 @@
 		09D41F14204D5C74009B1326 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09F40CF82057649E00A4E7B6 /* CustomNavView.h */,
+				09F40CF72057649E00A4E7B6 /* CustomNavView.m */,
+				09F40CFA2057691D00A4E7B6 /* InputTextField.h */,
+				09F40CFB2057691D00A4E7B6 /* InputTextField.m */,
+				09F40D042057953200A4E7B6 /* RegisterTextField.h */,
+				09F40D032057953200A4E7B6 /* RegisterTextField.m */,
+				09F40D06205797A700A4E7B6 /* RegisterTextField2.h */,
+				09F40D07205797A700A4E7B6 /* RegisterTextField2.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -832,8 +857,10 @@
 			files = (
 				09D41ED5204D56C6009B1326 /* UIView+Extension.m in Sources */,
 				09F40CE720565FFE00A4E7B6 /* MainButton.m in Sources */,
+				09F40CFC2057691D00A4E7B6 /* InputTextField.m in Sources */,
 				09D41EDA204D56C6009B1326 /* LaunchView.m in Sources */,
 				09D41ED4204D56C6009B1326 /* UILabel+LYZ.m in Sources */,
+				09F40D022057717500A4E7B6 /* RegisterViewController.m in Sources */,
 				09D41EDB204D56C6009B1326 /* customNaviController.m in Sources */,
 				09BC05D7204CD88800D36BB7 /* ViewController.m in Sources */,
 				09D41EE2204D56C6009B1326 /* tabbarButton.m in Sources */,
@@ -844,10 +871,13 @@
 				09D41ED3204D56C6009B1326 /* UIImage+LYZ.m in Sources */,
 				09F40CE420565A0800A4E7B6 /* MainBtnCell.m in Sources */,
 				09D41ED8204D56C6009B1326 /* LanchModel.m in Sources */,
+				09F40D08205797A700A4E7B6 /* RegisterTextField2.m in Sources */,
+				09F40D052057953200A4E7B6 /* RegisterTextField.m in Sources */,
 				09D41ED9204D56C6009B1326 /* LanchViewManger.m in Sources */,
 				09F40CD820562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
 				09D41EDC204D56C6009B1326 /* NewFeatureViewController.m in Sources */,
 				09D41EE1204D56C6009B1326 /* tabbarBadgeButton.m in Sources */,
+				09F40CF92057649E00A4E7B6 /* CustomNavView.m in Sources */,
 				09D41F17204D5C85009B1326 /* LoginViewController.m in Sources */,
 				09D41ED0204D56C6009B1326 /* NSString+isoEncoding.m in Sources */,
 				09D41F0C204D5A4B009B1326 /* FavoriteViewController.m in Sources */,
