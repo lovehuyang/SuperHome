@@ -14,6 +14,7 @@
 #define Hight_NAV 120
 @interface RegisterViewController ()
 {
+    CustomNavView *navBar;
     RegisterTextField *userPhone_TF;
     RegisterTextField2 *security_TF;
     UITextField *password_TF;
@@ -33,7 +34,7 @@
 
 - (void)createUI{
     // 手机号
-    userPhone_TF = [[RegisterTextField alloc]initWithFrame:CGRectMake(25, 150 , ScrW - 50, 30) title:@"+86" placeholder:@"请输入手机号"];
+    userPhone_TF = [[RegisterTextField alloc]initWithFrame:CGRectMake(25, CGRectGetMaxY(navBar.frame) + 60 , ScrW - 50, 30) title:@"+86" placeholder:@"请输入手机号"];
     userPhone_TF.keyboardType = UIKeyboardTypeNumberPad;
     [self.view addSubview:userPhone_TF];
     
@@ -101,10 +102,10 @@
 }
 #pragma mark - 创建导航栏
 - (void)createNavBar{
-    CustomNavView *navBar = [[CustomNavView alloc]initWithFrame:CGRectMake(0, 0, ScrW, Hight_NAV) title:self.page_Type == Page_Register?@"手机号码注册":@"找回密码"];
-    navBar.backgroundColor = [UIColor orangeColor];
+    navBar = [[CustomNavView alloc]initWithFrame:CGRectMake(0, 0, ScrW, Hight_NAV) title:self.page_Type == Page_Register?@"手机号码注册":@"找回密码"];
+    __weak __typeof (self)weakSelf = self;
     navBar.returnEvent = ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };
     [self.view addSubview:navBar];
 }

@@ -38,4 +38,9 @@
  */
 - (void)hidenMBProgressHUD;
 
+/**
+ 弹出登录页面
+ */
+- (void)presentLoginViewController;
+
 @end

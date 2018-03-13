@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "LoginViewController.h"
 
 
 @interface RootViewController ()
@@ -79,5 +80,12 @@
 }
 
 
+/**
+ 弹出登录页面
+ */
+- (void)presentLoginViewController{
+    LoginViewController *lvc = [[LoginViewController alloc]init];
+    [self presentViewController:lvc animated:YES completion:nil];
+}
 
 @end

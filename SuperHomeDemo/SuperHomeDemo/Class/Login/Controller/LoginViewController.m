@@ -16,6 +16,7 @@
 {
     UITextField *userPhone_TF;
     UITextField *password_TF;
+    CustomNavView *navBar;
 }
 @end
 
@@ -32,13 +33,13 @@
     NSArray *placeholder = @[@"请输入手机号码/账号",@"请输入密码"];
     for(int i=0; i<2; i++){
         
-        InputTextField *tf = [[InputTextField alloc]init];;
+        InputTextField *tf = [[InputTextField alloc]init];
         [self.view addSubview:tf];
         tf.font = [UIFont systemFontOfSize:14];
         tf.sd_layout
         .leftSpaceToView(self.view, 25)
         .rightSpaceToView(self.view, 25)
-        .topSpaceToView(self.view, 150 + 45 *i)
+        .topSpaceToView(navBar, 60 + 45 *i)
         .heightIs(30);
         
         tf.placeholder = placeholder[i];
@@ -93,10 +94,11 @@
 }
 #pragma mark - 创建导航栏
 - (void)createNavBar{
-    CustomNavView *navBar = [[CustomNavView alloc]initWithFrame:CGRectMake(0, 0, ScrW, Hight_NAV) title:@"登录"];
+    navBar = [[CustomNavView alloc]initWithFrame:CGRectMake(0, 0, ScrW, Hight_NAV) title:@"登录"];
     navBar.backgroundColor = [UIColor orangeColor];
+    __weak __typeof (self)weakSelf = self;
     navBar.returnEvent = ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };
     [self.view addSubview:navBar];
 }

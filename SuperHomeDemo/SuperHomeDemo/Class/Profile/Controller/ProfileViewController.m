@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-#import "LoginViewController.h"
+
 
 @interface ProfileViewController ()
 
@@ -21,8 +21,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    LoginViewController *lvc = [[LoginViewController alloc]init];
-    [self presentViewController:lvc animated:YES completion:nil];
+    [self presentLoginViewController];
 }
 
 @end
