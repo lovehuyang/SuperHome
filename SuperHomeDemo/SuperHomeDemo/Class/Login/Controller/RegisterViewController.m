@@ -30,8 +30,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self createNavBar];
     [self createUI];
+    [self addSwipeGesture];// 添加轻扫手势
 }
 
+#pragma mark - 添加轻扫手势
+- (void)addSwipeGesture{
+    UISwipeGestureRecognizer * recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    self.view.userInteractionEnabled = YES;
+    [self.view addGestureRecognizer:recognizer];
+    
+}
 - (void)createUI{
     // 手机号
     userPhone_TF = [[RegisterTextField alloc]initWithFrame:CGRectMake(25, CGRectGetMaxY(navBar.frame) + 60 , ScrW - 50, 30) title:@"+86" placeholder:@"请输入手机号"];
@@ -130,5 +139,11 @@
     }else{
         DLog(@"未同意条款");
     }
+}
+
+#pragma mark - 手势事件
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)gesture{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

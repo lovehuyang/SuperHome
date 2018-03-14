@@ -27,6 +27,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self createNavBar];// 创建导航栏
     [self createTextField];// 创建文本框
+    [self addSwipeGesture];// 添加手势
+}
+
+#pragma mark - 添加轻扫手势
+- (void)addSwipeGesture{
+    UISwipeGestureRecognizer * recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    self.view.userInteractionEnabled = YES;
+    [self.view addGestureRecognizer:recognizer];
+    
 }
 - (void)createTextField{
     
@@ -69,10 +79,10 @@
     UIButton *registerBtn = [UIButton new];
     [self.view addSubview:registerBtn];
     registerBtn.sd_layout
-    .topSpaceToView(loginBtn, 17)
+    .topSpaceToView(loginBtn, 15)
     .leftEqualToView(loginBtn)
     .widthIs(60)
-    .heightIs(20);
+    .heightIs(30);
     [registerBtn setTitle:@"注册账号" forState:UIControlStateNormal];
     registerBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     registerBtn.tag = 10;
@@ -82,10 +92,10 @@
     UIButton *forgetBtn = [UIButton new];
     [self.view addSubview:forgetBtn];
     forgetBtn.sd_layout
-    .topSpaceToView(loginBtn, 17)
+    .topEqualToView(registerBtn)
     .rightEqualToView(loginBtn)
-    .widthIs(60)
-    .heightIs(20);
+    .widthRatioToView(registerBtn, 1)
+    .heightRatioToView(registerBtn, 1);
     [forgetBtn setTitle:@"找回密码" forState:UIControlStateNormal];
     forgetBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     forgetBtn.tag = 11;
@@ -114,5 +124,9 @@
     [self presentViewController:rvc animated:YES completion:nil];
     
 }
-
+#pragma mark - 手势事件
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)gesture{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
