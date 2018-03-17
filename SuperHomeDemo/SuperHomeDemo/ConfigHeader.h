@@ -9,6 +9,13 @@
 #ifndef ConfigHeader_h
 #define ConfigHeader_h
 
+// 高德地图
+#define MAP_KEY @"2f44b49a8ccba7d347f12cb1c14159cd"
+
+// 比例
+#define Scale [AppDelegate shareInstance].autoSizeScale
+#define IMG_H  150.0/375*ScrW // 顶部轮播图高度
+
 // 常用的键值
 #define USER_ID @"user_id"// 用户ID
 #define USER_PHONE @"user_phone"// 用户登录手机号

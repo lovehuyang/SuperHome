@@ -15,7 +15,6 @@
 #import "MainBtnCell.h"
 #import "AutoScrollLabel.h" // 跑马灯
 
-#define IMG_H  150.0/375*ScrW // 顶部轮播图高度
 @interface HomeViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)AutoScrollLabel *autoScrollLabel;
 @property (nonatomic ,strong) UITableView *tableView;

@@ -11,4 +11,7 @@ target 'SuperHomeDemo' do
     pod 'AFNetworking', '~> 3.1.0'
     pod 'MMScan', '~> 0.0'# 扫一扫
     pod 'PPBadgeView'#未读个数提示
+    pod 'AMap3DMap' #2D地图SDK
+    pod 'AMapSearch'
+    pod 'AMapLocation'
 end

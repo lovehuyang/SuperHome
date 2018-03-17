@@ -10,7 +10,13 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
++(AppDelegate*)shareInstance;
+
+//适配屏幕比例
+@property float autoSizeScale;
+
 @property (strong, nonatomic) UIWindow *window;
+
 
 
 @end

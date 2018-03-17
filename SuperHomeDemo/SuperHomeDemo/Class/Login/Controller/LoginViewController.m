@@ -36,8 +36,8 @@
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
     self.view.userInteractionEnabled = YES;
     [self.view addGestureRecognizer:recognizer];
-    
 }
+
 - (void)createTextField{
     
     NSArray *placeholder = @[@"请输入手机号码/账号",@"请输入密码"];

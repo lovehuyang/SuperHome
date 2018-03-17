@@ -18,6 +18,7 @@
 #import "CommonDataHeader.h"
 #import <SDAutoLayout.h>
 #import <PPBadgeView.h>
+#import "AppDelegate.h"
 
 
 

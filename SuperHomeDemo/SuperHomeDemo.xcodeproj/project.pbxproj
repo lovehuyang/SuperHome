@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09AED080205CCC2C0019549C /* StaffTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AED07F205CCC2C0019549C /* StaffTableViewCell.m */; };
+		09AED082205D05350019549C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AED081205D052A0019549C /* MapKit.framework */; };
 		09BC05D4204CD88800D36BB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05D3204CD88800D36BB7 /* AppDelegate.m */; };
 		09BC05D7204CD88800D36BB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05D6204CD88800D36BB7 /* ViewController.m */; };
 		09BC05DA204CD88800D36BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BC05D8204CD88800D36BB7 /* Main.storyboard */; };
@@ -56,10 +58,15 @@
 		09F40D022057717500A4E7B6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D012057717500A4E7B6 /* RegisterViewController.m */; };
 		09F40D052057953200A4E7B6 /* RegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D032057953200A4E7B6 /* RegisterTextField.m */; };
 		09F40D08205797A700A4E7B6 /* RegisterTextField2.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D07205797A700A4E7B6 /* RegisterTextField2.m */; };
+		09F40D102058CF8B00A4E7B6 /* WuYeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D0F2058CF8B00A4E7B6 /* WuYeInfoView.m */; };
+		09F40D132058E7EF00A4E7B6 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40D122058E7EF00A4E7B6 /* SliderView.m */; };
 		A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09AED07E205CCC2C0019549C /* StaffTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaffTableViewCell.h; sourceTree = "<group>"; };
+		09AED07F205CCC2C0019549C /* StaffTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaffTableViewCell.m; sourceTree = "<group>"; };
+		09AED081205D052A0019549C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		09BC05CF204CD88800D36BB7 /* SuperHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BC05D2204CD88800D36BB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09BC05D3204CD88800D36BB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +168,10 @@
 		09F40D042057953200A4E7B6 /* RegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTextField.h; sourceTree = "<group>"; };
 		09F40D06205797A700A4E7B6 /* RegisterTextField2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTextField2.h; sourceTree = "<group>"; };
 		09F40D07205797A700A4E7B6 /* RegisterTextField2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTextField2.m; sourceTree = "<group>"; };
+		09F40D0E2058CF8B00A4E7B6 /* WuYeInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WuYeInfoView.h; sourceTree = "<group>"; };
+		09F40D0F2058CF8B00A4E7B6 /* WuYeInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WuYeInfoView.m; sourceTree = "<group>"; };
+		09F40D112058E7EF00A4E7B6 /* SliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		09F40D122058E7EF00A4E7B6 /* SliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHomeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3763A605D7C73A5E4136AAF /* Pods-SuperHomeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F81DAF996C5A574F06252790 /* Pods-SuperHomeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHomeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09AED082205D05350019549C /* MapKit.framework in Frameworks */,
 				A198214CE20FF0925DE89AAF /* libPods-SuperHomeDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +636,12 @@
 		09D41EFD204D59E3009B1326 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09AED07E205CCC2C0019549C /* StaffTableViewCell.h */,
+				09AED07F205CCC2C0019549C /* StaffTableViewCell.m */,
+				09F40D0E2058CF8B00A4E7B6 /* WuYeInfoView.h */,
+				09F40D0F2058CF8B00A4E7B6 /* WuYeInfoView.m */,
+				09F40D112058E7EF00A4E7B6 /* SliderView.h */,
+				09F40D122058E7EF00A4E7B6 /* SliderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -719,6 +737,7 @@
 		C379A8105A3B517553798137 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09AED081205D052A0019549C /* MapKit.framework */,
 				43A73765A399F3233A79792B /* libPods-SuperHomeDemo.a */,
 			);
 			name = Frameworks;
@@ -817,6 +836,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/MMScan/MMScanner/resource.bundle",
@@ -873,10 +893,12 @@
 				09D41ED8204D56C6009B1326 /* LanchModel.m in Sources */,
 				09F40D08205797A700A4E7B6 /* RegisterTextField2.m in Sources */,
 				09F40D052057953200A4E7B6 /* RegisterTextField.m in Sources */,
+				09F40D102058CF8B00A4E7B6 /* WuYeInfoView.m in Sources */,
 				09D41ED9204D56C6009B1326 /* LanchViewManger.m in Sources */,
 				09F40CD820562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
 				09D41EDC204D56C6009B1326 /* NewFeatureViewController.m in Sources */,
 				09D41EE1204D56C6009B1326 /* tabbarBadgeButton.m in Sources */,
+				09F40D132058E7EF00A4E7B6 /* SliderView.m in Sources */,
 				09F40CF92057649E00A4E7B6 /* CustomNavView.m in Sources */,
 				09D41F17204D5C85009B1326 /* LoginViewController.m in Sources */,
 				09D41ED0204D56C6009B1326 /* NSString+isoEncoding.m in Sources */,
@@ -891,6 +913,7 @@
 				09F40CE1205650D200A4E7B6 /* NewsListCell.m in Sources */,
 				09D41EE9204D58E5009B1326 /* UIColor+HLY.m in Sources */,
 				09D41ED1204D56C6009B1326 /* NSTimer+Addition.m in Sources */,
+				09AED080205CCC2C0019549C /* StaffTableViewCell.m in Sources */,
 				09D41F09204D5A3D009B1326 /* WuYeViewController.m in Sources */,
 				09BC05D4204CD88800D36BB7 /* AppDelegate.m in Sources */,
 				09D41EDF204D56C6009B1326 /* PlusButton.m in Sources */,
@@ -1040,7 +1063,7 @@
 				INFOPLIST_FILE = SuperHomeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.tongzhi.com.feiqu.SuperHomeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiqu.superhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1057,7 +1080,7 @@
 				INFOPLIST_FILE = SuperHomeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.tongzhi.com.feiqu.SuperHomeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiqu.superhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
