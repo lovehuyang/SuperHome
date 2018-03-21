@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092DFC392061FF3A003102C2 /* WuYeStaffInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092DFC382061FF3A003102C2 /* WuYeStaffInfoCell.m */; };
+		092DFC3C20620675003102C2 /* WuYeStaffHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 092DFC3B20620675003102C2 /* WuYeStaffHeaderView.m */; };
 		09AED080205CCC2C0019549C /* StaffTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AED07F205CCC2C0019549C /* StaffTableViewCell.m */; };
 		09AED082205D05350019549C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AED081205D052A0019549C /* MapKit.framework */; };
+		09AED0872061092F0019549C /* WuYeStaffInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AED0862061092F0019549C /* WuYeStaffInfoController.m */; };
 		09BC05D4204CD88800D36BB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05D3204CD88800D36BB7 /* AppDelegate.m */; };
 		09BC05D7204CD88800D36BB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC05D6204CD88800D36BB7 /* ViewController.m */; };
 		09BC05DA204CD88800D36BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BC05D8204CD88800D36BB7 /* Main.storyboard */; };
@@ -64,9 +67,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092DFC372061FF3A003102C2 /* WuYeStaffInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WuYeStaffInfoCell.h; sourceTree = "<group>"; };
+		092DFC382061FF3A003102C2 /* WuYeStaffInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WuYeStaffInfoCell.m; sourceTree = "<group>"; };
+		092DFC3A20620675003102C2 /* WuYeStaffHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WuYeStaffHeaderView.h; sourceTree = "<group>"; };
+		092DFC3B20620675003102C2 /* WuYeStaffHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WuYeStaffHeaderView.m; sourceTree = "<group>"; };
 		09AED07E205CCC2C0019549C /* StaffTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaffTableViewCell.h; sourceTree = "<group>"; };
 		09AED07F205CCC2C0019549C /* StaffTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaffTableViewCell.m; sourceTree = "<group>"; };
 		09AED081205D052A0019549C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		09AED0852061092F0019549C /* WuYeStaffInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WuYeStaffInfoController.h; sourceTree = "<group>"; };
+		09AED0862061092F0019549C /* WuYeStaffInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WuYeStaffInfoController.m; sourceTree = "<group>"; };
 		09BC05CF204CD88800D36BB7 /* SuperHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BC05D2204CD88800D36BB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09BC05D3204CD88800D36BB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -615,6 +624,8 @@
 			children = (
 				09D41F07204D5A3D009B1326 /* WuYeViewController.h */,
 				09D41F08204D5A3D009B1326 /* WuYeViewController.m */,
+				09AED0852061092F0019549C /* WuYeStaffInfoController.h */,
+				09AED0862061092F0019549C /* WuYeStaffInfoController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -642,6 +653,10 @@
 				09F40D0F2058CF8B00A4E7B6 /* WuYeInfoView.m */,
 				09F40D112058E7EF00A4E7B6 /* SliderView.h */,
 				09F40D122058E7EF00A4E7B6 /* SliderView.m */,
+				092DFC372061FF3A003102C2 /* WuYeStaffInfoCell.h */,
+				092DFC382061FF3A003102C2 /* WuYeStaffInfoCell.m */,
+				092DFC3A20620675003102C2 /* WuYeStaffHeaderView.h */,
+				092DFC3B20620675003102C2 /* WuYeStaffHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -895,13 +910,16 @@
 				09F40D052057953200A4E7B6 /* RegisterTextField.m in Sources */,
 				09F40D102058CF8B00A4E7B6 /* WuYeInfoView.m in Sources */,
 				09D41ED9204D56C6009B1326 /* LanchViewManger.m in Sources */,
+				09AED0872061092F0019549C /* WuYeStaffInfoController.m in Sources */,
 				09F40CD820562A9C00A4E7B6 /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
+				092DFC392061FF3A003102C2 /* WuYeStaffInfoCell.m in Sources */,
 				09D41EDC204D56C6009B1326 /* NewFeatureViewController.m in Sources */,
 				09D41EE1204D56C6009B1326 /* tabbarBadgeButton.m in Sources */,
 				09F40D132058E7EF00A4E7B6 /* SliderView.m in Sources */,
 				09F40CF92057649E00A4E7B6 /* CustomNavView.m in Sources */,
 				09D41F17204D5C85009B1326 /* LoginViewController.m in Sources */,
 				09D41ED0204D56C6009B1326 /* NSString+isoEncoding.m in Sources */,
+				092DFC3C20620675003102C2 /* WuYeStaffHeaderView.m in Sources */,
 				09D41F0C204D5A4B009B1326 /* FavoriteViewController.m in Sources */,
 				09D41EDD204D56C6009B1326 /* RootViewController.m in Sources */,
 				09F40CD720562A9C00A4E7B6 /* JElasticPullToRefreshLoadingView.m in Sources */,

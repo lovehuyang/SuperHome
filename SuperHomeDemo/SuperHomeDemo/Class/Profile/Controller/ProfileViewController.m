@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-
+#import <WRNavigationBar.h>
 
 @interface ProfileViewController ()
 
@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self wr_setNavBarBackgroundAlpha:0];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

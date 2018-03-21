@@ -91,7 +91,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //3、加载网络图片
-        self.tableHeadView.imageURLStringsGroup = @[@"https://www.doc-sign.com/skin/images/5892845.png",@"https://www.doc-sign.com/skin/images/23130375.jpg",@"https://www.doc-sign.com/skin/images/1742141.jpg",@"https://www.doc-sign.com/skin/images/5892845.png",@"https://www.doc-sign.com/skin/images/23130375.jpg",@"https://www.doc-sign.com/skin/images/1742141.jpg"];
+        self.tableHeadView.imageURLStringsGroup = @[@"https://www.doc-sign.com/skin/images/5892845.png",@"https://www.doc-sign.com/skin/images/23130375.jpg",@"https://www.doc-sign.com/skin/images/1742141.jpg"];
     });
 }
 

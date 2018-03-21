@@ -14,7 +14,7 @@
 
 // 比例
 #define Scale [AppDelegate shareInstance].autoSizeScale
-#define IMG_H  150.0/375*ScrW // 顶部轮播图高度
+#define IMG_H  180.0/375*ScrW // 顶部轮播图高度
 
 // 常用的键值
 #define USER_ID @"user_id"// 用户ID
@@ -22,7 +22,7 @@
 #define USER_PASSWORD @"user_password" // 用户密码
 
 //常用颜色
-#define Color_Theme HXYGetColor(@"#3F60C1")// 主题色
+#define Color_Theme HXYGetColor(@"#4A90E2")// 主题色
 #define Color_Back_Gray HXYGetColor(@"#F6F6F6")// 背景灰色
 #define Color_Text_Gray HXYGetColor(@"#666666")// 字体灰色
 #define Color_Text_Gray9 HXYGetColor(@"#999999")

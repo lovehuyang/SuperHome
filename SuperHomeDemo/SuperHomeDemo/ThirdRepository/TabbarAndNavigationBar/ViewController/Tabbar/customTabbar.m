@@ -34,18 +34,14 @@
 
         //添加一个“+”按钮
         PlusButton *plusButton = [PlusButton buttonWithType:UIButtonTypeCustom];
-        [plusButton setImage:[UIImage imageNamed:@"tabbar_discover_os7"] forState:UIControlStateNormal];
-        [plusButton setImage:[UIImage imageNamed:@"tabbar_discover_selected_os7"] forState:UIControlStateHighlighted];
+        [plusButton setImage:[UIImage imageNamed:@"center_icon"] forState:UIControlStateNormal];
+        [plusButton setImage:[UIImage imageNamed:@"center_icon"] forState:UIControlStateHighlighted];
         [self addSubview:plusButton];
-        [plusButton setBackgroundColor:[UIColor whiteColor]];
-        plusButton.bounds = CGRectMake(0, 0, 60, 60);
-        plusButton.layer.cornerRadius = 30;
-        plusButton.layer.masksToBounds = YES;
+        plusButton.frame = CGRectMake(0, 0, 60, 60);
+//        plusButton.layer.cornerRadius = 30;
+//        plusButton.layer.masksToBounds = YES;
         self.plusButton = plusButton;
         [self.plusButton addTarget:self action:@selector(plusButtonClick) forControlEvents:UIControlEventTouchUpInside];
-//        [self.plusButton setTitle:@"房屋" forState:UIControlStateNormal];
-//        [self.plusButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [self drawCircle];
 
     }
     return self;
@@ -60,6 +56,7 @@
     //第四个参数是结束弧度
     //第五个参数是传入yes是顺时针,no为顺时针，下面的另外一种实现方法的参数意思也是一致
     [path addArcWithCenter:CGPointMake(self.plusButton.center.x,self.plusButton.center.y) radius:10 startAngle:0 endAngle:M_PI_2 clockwise:NO];
+    
     //渲染
     [path stroke];
 }
@@ -119,7 +116,7 @@
     //调整“+”按钮的frame
     CGFloat h = self.frame.size.height;
     CGFloat w = self.frame.size.width;
-    self.plusButton.center = CGPointMake(w * 0.5, h - 35);
+    self.plusButton.center = CGPointMake(w * 0.5, 5);
     
     //tabbar按钮的位置
     CGFloat buttonW = w/self.subviews.count;

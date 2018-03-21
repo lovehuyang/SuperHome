@@ -12,15 +12,28 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        self.imageView.backgroundColor = [UIColor redColor];
         self.titleLabel.backgroundColor = [UIColor blueColor];
+        self.backgroundColor = [UIColor clearColor];
+
     }
     return self;
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    UILabel *titleLab = [UILabel new];
+    titleLab.frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame) + 2, self.frame.size.width, 15);
+    titleLab.text = @"房屋";
+    titleLab.textColor = HXYGetColor(@"#777777");
+    titleLab.font = [UIFont systemFontOfSize:11];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:titleLab];
 }
 
 - (void)drawRect:(CGRect)rect{
     drawArc();// 画圆弧
 }
+
 
 /**
  *  画圆弧
@@ -40,9 +53,9 @@ void drawArc(){
      *  @param clockwise    圆弧的伸展方向(1逆时针，0顺时针)
      *
      */
-    CGContextAddArc(ctx, 30, 30, 30, -M_PI +M_PI/6.5 , -M_PI/6.5, 0);
-    CGContextSetLineWidth(ctx, 1);// 线的宽度
-    CGContextSetStrokeColorWithColor(ctx, HXYGetColor(@"#D0D0D9").CGColor);
+    CGContextAddArc(ctx, 30, 30, 29, -M_PI +  M_PI/16.5  , -M_PI/16.5, 0);
+    CGContextSetLineWidth(ctx, 0.6);// 线的宽度
+    CGContextSetStrokeColorWithColor(ctx, HXYGetColor(@"#B4B4B4").CGColor);
     CGContextStrokePath(ctx);
 }
 @end

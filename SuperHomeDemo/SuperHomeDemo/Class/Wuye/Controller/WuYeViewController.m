@@ -7,7 +7,9 @@
 //
 
 #import "WuYeViewController.h"
+#import "WuYeStaffInfoController.h"
 #import "WuYeInfoView.h"
+#import <SDCycleScrollView.h>
 #import <WRNavigationBar.h>
 #import "SliderView.h"
 #import "StaffTableViewCell.h"
@@ -15,7 +17,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 
-@interface WuYeViewController ()<UITableViewDelegate, UITableViewDataSource,MAMapViewDelegate,AMapLocationManagerDelegate>
+@interface WuYeViewController ()<UITableViewDelegate, UITableViewDataSource,MAMapViewDelegate,AMapLocationManagerDelegate,SDCycleScrollViewDelegate>
+@property (nonatomic ,strong) SDCycleScrollView *cycleView;// 顶部轮播图
 @property (nonatomic ,strong) SliderView *sliderView;
 @property (nonatomic ,strong) UITextView *introduceTextView;//物业介绍
 @property (nonatomic ,strong) UITableView *tableview;//职员列表
@@ -45,46 +48,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createUI];
+    [self loadScrollViewData];// 加载轮播图数据
 }
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
+    // 添加大头针 并执行大头针的代理方法 MAMapViewDelegate117.151158,36.67058
     MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
+    pointAnnotation.coordinate = CLLocationCoordinate2DMake(36.67058, 117.151158);
     pointAnnotation.title = @"办公地点";
     pointAnnotation.subtitle = @"济南市历下区花园庄东路16号数码港公寓";
     [_mapView addAnnotation:pointAnnotation];
-    
-    [self configLocationManager];
-}
-
-- (void)configLocationManager
-{
-    
-    self.locationManager = [[AMapLocationManager alloc] init];
-    
-    [self.locationManager setDelegate:self];
-    
-    //设置不允许系统暂停定位
-    [self.locationManager setPausesLocationUpdatesAutomatically:NO];
-    
-    //设置允许在后台定位
-//    [self.locationManager setAllowsBackgroundLocationUpdates:YES];
-    
-    //设置允许连续定位逆地理
-    [self.locationManager setLocatingWithReGeocode:YES];
 }
 
 - (void)createUI{
-    
-    //顶部大图
-    UIImageView *wuyeImgView = [[UIImageView alloc] init];
-    wuyeImgView.frame = CGRectMake(0, 0, ScrW, 180 *Scale);
-    wuyeImgView.image = [UIImage imageNamed:@"raw_1499049464"];
-    [self.view addSubview:wuyeImgView];
-    
+    [self.view addSubview:self.cycleView];
     // 物业信息
-    WuYeInfoView *wuyeInfoView = [[WuYeInfoView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(wuyeImgView.frame), ScrW, 100 *Scale) title:@"诚信行物业" promise:@"用心服务，因您改变" phone:@"15665889999"];
+    WuYeInfoView *wuyeInfoView = [[WuYeInfoView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cycleView.frame), ScrW, 100 *Scale) title:@"诚信行物业" promise:@"用心服务，因您改变" phone:@"15665889999"];
     wuyeInfoView.makePhone = ^(NSString *phoneNum) {
         DLog(@"%@",phoneNum);
     };
@@ -112,7 +92,7 @@
     // 职员列表
     [self.view addSubview:self.tableview];
     
-    // 办公位置
+    // 办公位置（添加地图）
     [self loadMapView];
 }
 
@@ -128,6 +108,17 @@
     }
     return _tableview;
 }
+
+- (SDCycleScrollView *)cycleView{
+    if (!_cycleView) {
+        //2、创建图片轮播器
+        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScrW, IMG_H) delegate:self placeholderImage:[UIImage imageNamed:@"banner_placeholder"]];
+        _cycleView.showPageControl = YES;
+        _cycleView.autoScrollTimeInterval = 5;
+        _cycleView.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _cycleView;
+}
 #pragma mark - 地图
 - (void)loadMapView{
     
@@ -140,61 +131,17 @@
     [self.mapView setDelegate:self];// 设置地图的代理
     [self.mapBgView addSubview:self.mapView];
     [self.view addSubview:self.mapBgView];
-    
+
+    ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
-    
-    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(36.67, 116.98 ); //天安门
-    [self.mapView setCenterCoordinate:coordinate];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //开始进行连续定位
-    [self.locationManager startUpdatingLocation];
-}
-#pragma mark - MAMapViewDelegate
-- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
-{
-    if ([annotation isKindOfClass:[MAPointAnnotation class]])
-    {
-        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-        MAPinAnnotationView*annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
-        if (annotationView == nil)
-        {
-            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
-        }
-        annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
-        annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
-        annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
-        annotationView.pinColor = MAPinAnnotationColorPurple;
-         annotationView.image            = [UIImage imageNamed:@"icon_location.png"];
-        return annotationView;
-    }if ([annotation isKindOfClass:[MAUserLocation class]]) {
-        return nil;
-    }
-    return nil;
+
 }
 
-#pragma mark - AMapLocationManagerDelegate
-- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode
-{
-    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f, reGeocode:%@}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy, reGeocode.formattedAddress);
-    
-//    //获取到定位信息，更新annotation
-//    if (self.pointAnnotaiton == nil)
-//    {
-//        self.pointAnnotaiton = [[MAPointAnnotation alloc] init];
-//        [self.pointAnnotaiton setCoordinate:location.coordinate];
-//
-//        [self.mapView addAnnotation:self.pointAnnotaiton];
-//    }
-//
-//    [self.pointAnnotaiton setCoordinate:location.coordinate];
-    
-    [self.mapView setCenterCoordinate:location.coordinate];
-    [self.mapView setZoomLevel:15.1 animated:NO];
-}
 #pragma mark  - UITableViewDelegate, UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;
@@ -205,12 +152,28 @@
     if (cell == nil) {
         cell = [[StaffTableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 85;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WuYeStaffInfoController *svc = [[WuYeStaffInfoController alloc]init];
+    [self.navigationController pushViewController:svc animated:YES];
+}
+
+#pragma mark - 加载轮播图数据
+
+- (void)loadScrollViewData{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //3、加载网络图片
+        self.cycleView.imageURLStringsGroup = @[@"http://cc.cocimg.com/api/uploads//20180319/1521438318989864.jpg",@"http://cc.cocimg.com/api/uploads//20180320/1521511742798237.gif",@"https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2018-03-20/c169b3f1cc8bff18f62526f73692cc3b.jpg",@"https://static.kuaishebao.com/h5/wb-recruit/swiper/04.png"];
+    });
+}
+
 #pragma mark - 导航栏点击事件
 - (void)rightItemClick:(UIButton *)rightBtn{
     rightBtn.selected = !rightBtn.selected;
@@ -239,5 +202,34 @@
             break;
     }
     DLog(@"%@",titleBtn.titleLabel.text);
+}
+
+#pragma mark - MAMapViewDelegate 大头针的代理方法
+
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation{
+    
+    DLog(@"大头针的类别：%@",[annotation class]);
+    
+    // 修改大头针的样式
+    if ([annotation isKindOfClass:[MAUserLocation class]]) {
+        DLog(@"当前位置的大头针");
+        return nil;
+        
+    }else if ([annotation isKindOfClass:[MAPointAnnotation class]]){
+        DLog(@"标记位置的大头针");
+        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+        MAAnnotationView *annotationView = (MAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        
+        if (annotationView == nil){
+            annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIndetifier];
+        }
+        annotationView.image = [UIImage imageNamed:@"icon_location"];
+        annotationView.canShowCallout = YES;
+        annotationView.draggable = YES;
+        //设置中心点偏移，使得标注底部中间点成为经纬度对应点
+        annotationView.centerOffset = CGPointMake(0, -18);
+        return annotationView;
+    }
+    return nil;
 }
 @end
