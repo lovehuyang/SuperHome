@@ -769,7 +769,6 @@
 				09BC05CB204CD88800D36BB7 /* Sources */,
 				09BC05CC204CD88800D36BB7 /* Frameworks */,
 				09BC05CD204CD88800D36BB7 /* Resources */,
-				3203F7A6B1BBB6341CCD218D /* [CP] Embed Pods Frameworks */,
 				4C68159217809E0400E7DD1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -829,28 +828,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3203F7A6B1BBB6341CCD218D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4C68159217809E0400E7DD1A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
@@ -858,11 +842,14 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/resource.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperHomeDemo/Pods-SuperHomeDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		77FE98C22CA4ED267D0AE7F1 /* [CP] Check Pods Manifest.lock */ = {

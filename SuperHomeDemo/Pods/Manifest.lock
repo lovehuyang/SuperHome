@@ -53,6 +53,24 @@ DEPENDENCIES:
   - SDWebImage
   - WRNavigationBar (~> 1.0.9)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AMap3DMap
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
+    - FMDB
+    - IQKeyboardManager
+    - MBProgressHUD
+    - MJRefresh
+    - MMScan
+    - PPBadgeView
+    - SDAutoLayout
+    - SDCycleScrollView
+    - SDWebImage
+    - WRNavigationBar
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMap3DMap: 97afc57b88628237d916991ac31795eb7bde3f63
@@ -72,4 +90,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 32e78e437eb58914dcaace7283b81377d7f2954f
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.7.1
